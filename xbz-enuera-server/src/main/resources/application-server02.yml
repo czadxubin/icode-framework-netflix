@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: my-eureka-server
+server:
+  port: 8763
+eureka:
+ instance:
+    hostname: my-eureka-server-02
+    prefer-ip-address: true
+ client:
+    service-url:
+      defaultZone: http://my-eureka-server-01:8762/eureka/

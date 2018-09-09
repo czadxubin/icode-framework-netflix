@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: my-eureka-client01
+server:
+  port: 8080
+  servlet:
+    context-path: /user
+eureka:
+ instance:
+    hostname: localhost
+    prefer-ip-address: true
+    status-page-url-path: ${server.servlet.context-path}/actuator/info
+    health-check-url-path: ${server.servlet.context-path}/actuator/health
+ client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+    
